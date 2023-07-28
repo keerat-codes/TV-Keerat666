@@ -7,6 +7,8 @@ const PORT = 8009;
 require('dotenv').config();
 
 const TV-ShowsRoute = require('./routes/TV-Shows');
+const retro  = require('./controllers/retro');
+app.use('/retro', retro);
 app.use('/TV-Shows', TV-ShowsRoute);
 app.use(cors())
 app.use(express.json());
